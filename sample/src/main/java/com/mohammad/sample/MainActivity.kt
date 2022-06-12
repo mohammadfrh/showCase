@@ -27,10 +27,6 @@ class MainActivity : AppCompatActivity(), ShowCaseCallBack {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        for (i in 0..2){
-            val modelTest = ModelTest()
-
-        }
 
         modelShowCase1.title =
             "غالب خدمات این سامانه با احراز هویت همین سطح قابل انجام است که در آن اقلام اطلاعاتی شما از طریق سازمان\u200Cهای متولی بررسی می\u200Cشود."

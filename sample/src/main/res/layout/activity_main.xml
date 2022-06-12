@@ -23,14 +23,13 @@
             app:layout_constraintStart_toStartOf="parent"
             android:text="show case" />
 
-        <Button
+        <TextView
             android:id="@+id/button_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Button Top"
             android:layout_marginTop="200dp"
             app:layout_constraintEnd_toEndOf="parent"
-
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
