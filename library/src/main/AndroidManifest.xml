@@ -1,0 +1,10 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mohammad.showcase">
+
+    <application>
+        <activity
+            android:name="com.mohammad.showcase.ui.showcase.ShowcaseActivity"
+            android:theme="@style/ShowcaseTransparentTheme" />
+    </application>
+
+</manifest>
