@@ -56,6 +56,17 @@ class MainActivity : AppCompatActivity(), ShowCaseCallBack {
     private fun showCaseItems(position: Int) {
         if (position == -1 || position >= modelShowCases.size)
             return
+        if(position == 0)
+            ShowcaseManager.isPrevEnable(false)
+        else
+            ShowcaseManager.isPrevEnable(true)
+
+        if(position == modelShowCases.size-1)
+            ShowcaseManager.isNextEnable(false)
+        else
+            ShowcaseManager.isNextEnable(true)
+
+
         ShowcaseManager.Builder()
             .view(modelShowCases[position].viewId)
             .titleText(modelShowCases[position].title)

@@ -39,10 +39,19 @@ data class ShowcaseModel(val rectF: RectF,
     companion object {
 
         internal lateinit var callBack: ShowCaseCallBack
+        internal var isNextEnable= false
+        internal var isPrevEnable= false
 
         fun setCallBack(callBack: ShowCaseCallBack) {
             this.callBack = callBack
         }
+        fun isNextEnable(isEnable:Boolean){
+            isNextEnable = isEnable
+        }
+        fun isPrevEnable(isEnable:Boolean){
+            isPrevEnable = isEnable
+        }
+
     }
 
 }

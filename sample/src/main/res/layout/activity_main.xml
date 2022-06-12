@@ -11,7 +11,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MainActivity"
+        android:background="@color/colorAccent">
 
         <Button
             android:id="@+id/button_show_case_view"
@@ -27,7 +28,7 @@
             android:id="@+id/button_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button Top"
+            android:text="Button Toppppppppppppppppp"
             android:layout_marginTop="200dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

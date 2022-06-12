@@ -2,6 +2,7 @@ package com.mohammad.showcase.ui.showcase
 
 import android.content.Context
 import android.graphics.Canvas
+import android.graphics.Color
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.Button
@@ -18,6 +19,7 @@ import com.mohammad.showcase.util.getShowcaseActivity
 import com.mohammad.showcase.util.shape.CircleShape
 import com.mohammad.showcase.util.shape.RectangleShape
 import com.mohammad.showcase.util.statusBarHeight
+import kotlinx.android.synthetic.main.layout_tooltip.view.*
 
 class ShowcaseView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0)
     : ConstraintLayout(context, attrs, defStyleAttr) {
@@ -113,6 +115,20 @@ class ShowcaseView @JvmOverloads constructor(context: Context, attrs: AttributeS
             binding.tooltipView.findViewById<Button>(R.id.button_last).setOnClickListener{ it2 ->
                 ShowcaseModel.callBack.onLastItemClick()
                 getShowcaseActivity()?.onBackPress(isHighlightClick(x, y))
+            }
+
+            if(ShowcaseModel.isNextEnable){
+                binding.tooltipView.button_next.setTextColor(Color.BLACK)
+            }
+            else{
+                binding.tooltipView.button_next.setTextColor(Color.parseColor("#AEACAC"))
+            }
+
+            if(ShowcaseModel.isPrevEnable){
+                binding.tooltipView.button_last.setTextColor(Color.BLACK)
+            }
+            else{
+                binding.tooltipView.button_last.setTextColor(Color.parseColor("#AEACAC"))
             }
 
             binding.tooltipViewState = TooltipViewState(

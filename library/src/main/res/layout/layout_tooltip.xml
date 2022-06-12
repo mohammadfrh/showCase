@@ -56,6 +56,7 @@
                     android:id="@+id/textViewTooltipTitle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/app_font"
                     android:layout_alignParentStart="true"
                     android:text="@{tooltipViewState.titleText}"
                     android:textAlignment="textStart"
@@ -72,6 +73,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:fontFamily="@font/app_font"
+                    android:visibility="gone"
                     android:text="@{tooltipViewState.descriptionText}"
                     android:textAlignment="textStart"
                     android:textColor="@{tooltipViewState.descriptionTextColor}"
@@ -93,6 +96,7 @@
                     app:srcCompat="@drawable/ic_close"
                     app:tint="@{tooltipViewState.closeButtonColor}" />
 
+
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -100,34 +104,69 @@
                     android:orientation="horizontal"
                     app:layout_constraintTop_toBottomOf="@+id/textViewTooltipDescription">
 
-                    <Button
-                        android:id="@+id/button_next"
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_marginStart="24dp"
                         android:layout_marginEnd="6dp"
                         android:layout_weight="1"
                         android:background="@drawable/shape_background_white_light_less_radius"
-                        android:text="بعدی"
-                        android:textSize="15sp"
-                        android:textColor="#9B9B9B"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textViewTooltipDescription" />
+                        app:layout_constraintTop_toBottomOf="@+id/textViewTooltipDescription" >
 
-                    <Button
-                        android:id="@+id/button_last"
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            android:layout_marginStart="25dp"
+                            app:srcCompat="@drawable/ic_next" />
+
+                        <Button
+                            android:id="@+id/button_next"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/app_font"
+                            android:text="بعدی"
+                            android:background="@null"
+                            android:textSize="15sp"
+                            android:textColor="#AEACAC"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"/>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="wrap_content"
                         android:layout_height="40dp"
                         android:layout_marginStart="6dp"
                         android:layout_marginEnd="24dp"
                         android:layout_weight="1"
-                        android:textColor="#9B9B9B"
                         android:background="@drawable/shape_background_white_light_less_radius"
-                        android:text="قبلی"
-                        android:textSize="15sp"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/textViewTooltipDescription" />
+                        app:layout_constraintTop_toBottomOf="@+id/textViewTooltipDescription" >
 
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            android:layout_marginEnd="25dp"
+                            app:srcCompat="@drawable/ic_prev" />
+
+                        <Button
+                            android:id="@+id/button_last"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/app_font"
+                            android:textColor="#9B9B9B"
+                            android:text="قبلی"
+                            android:background="@null"
+                            android:textSize="15sp"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
             </androidx.constraintlayout.widget.ConstraintLayout>

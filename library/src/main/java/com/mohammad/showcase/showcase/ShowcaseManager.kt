@@ -181,5 +181,13 @@ data class ShowcaseManager(
         fun setCallBack(callBack : ShowCaseCallBack){
             ShowcaseModel.setCallBack(callBack)
         }
+
+        fun isNextEnable(isEnable:Boolean){
+            ShowcaseModel.isNextEnable(isEnable)
+        }
+
+        fun isPrevEnable(isEnable:Boolean){
+            ShowcaseModel.isPrevEnable(isEnable)
+        }
     }
 }
