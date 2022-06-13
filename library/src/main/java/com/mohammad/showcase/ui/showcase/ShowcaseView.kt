@@ -103,8 +103,8 @@ class ShowcaseView @JvmOverloads constructor(context: Context, attrs: AttributeS
             }
 
             binding.showcaseViewState = ShowcaseViewState(when (it.highlightType) {
-                HighlightType.CIRCLE -> TooltipFieldUtil.calculateMarginForCircle(resources, it.topOfCircle(), it.bottomOfCircle(), arrowPosition, statusBarHeight())
-                HighlightType.RECTANGLE -> TooltipFieldUtil.calculateMarginForRectangle(resources, it.rectF.top, it.rectF.bottom, arrowPosition, statusBarHeight())
+                HighlightType.CIRCLE -> TooltipFieldUtil.calculateMarginForCircle(resources, it.topOfCircle(), it.bottomOfCircle(), arrowPosition, statusBarHeight() , ShowcaseModel.marginTop , ShowcaseModel.marginBottom)
+                HighlightType.RECTANGLE -> TooltipFieldUtil.calculateMarginForRectangle(resources, it.rectF.top, it.rectF.bottom, arrowPosition, statusBarHeight() , ShowcaseModel.marginTop , ShowcaseModel.marginBottom)
             })
 
             binding.tooltipView.findViewById<Button>(R.id.button_next).setOnClickListener{ it2 ->

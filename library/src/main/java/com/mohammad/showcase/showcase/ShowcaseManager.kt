@@ -189,5 +189,13 @@ data class ShowcaseManager(
         fun isPrevEnable(isEnable:Boolean){
             ShowcaseModel.isPrevEnable(isEnable)
         }
+
+        fun setMarginTop(marginTop:Int){
+            ShowcaseModel.setMarginTop(marginTop)
+        }
+
+        fun setMarginBottom(marginBottom:Int){
+            ShowcaseModel.setMarginBottom(marginBottom)
+        }
     }
 }

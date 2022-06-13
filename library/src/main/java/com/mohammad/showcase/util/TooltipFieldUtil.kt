@@ -21,15 +21,31 @@ object TooltipFieldUtil {
         return sqrt(x.pow(2) + y.pow(2)).toFloat()
     }
 
-    fun calculateMarginForCircle(resources: Resources, top: Float, bottom: Float, arrowPosition: ArrowPosition, statusBarDiff: Int) = when (arrowPosition) {
-        ArrowPosition.UP -> bottom.toInt() + statusBarDiff
-        ArrowPosition.DOWN -> resources.displayMetrics.heightPixels - top.toInt()// + statusBarDiff
+    fun calculateMarginForCircle(
+        resources: Resources,
+        top: Float,
+        bottom: Float,
+        arrowPosition: ArrowPosition,
+        statusBarDiff: Int,
+        marginTop: Int,
+        marginBottom: Int,
+    ) = when (arrowPosition) {
+        ArrowPosition.UP -> bottom.toInt() + statusBarDiff + marginTop
+        ArrowPosition.DOWN -> resources.displayMetrics.heightPixels - top.toInt() + marginBottom
         else -> 0//throw IllegalArgumentException("arrowPosition should be ArrowPosition.UP or ArrowPosition.DOWN")
     }
 
-    fun calculateMarginForRectangle(resources: Resources, top: Float, bottom: Float, arrowPosition: ArrowPosition, statusBarDiff: Int) = when (arrowPosition) {
-        ArrowPosition.UP -> bottom.toInt() + statusBarDiff
-        ArrowPosition.DOWN -> resources.displayMetrics.heightPixels - top.toInt()// + statusBarDiff
+    fun calculateMarginForRectangle(
+        resources: Resources,
+        top: Float,
+        bottom: Float,
+        arrowPosition: ArrowPosition,
+        statusBarDiff: Int,
+        marginTop: Int ,
+        marginBottom: Int ,
+    ) = when (arrowPosition) {
+        ArrowPosition.UP -> bottom.toInt() + statusBarDiff + marginTop
+        ArrowPosition.DOWN -> resources.displayMetrics.heightPixels - top.toInt() + marginBottom
         else -> 0//throw IllegalArgumentException("arrowPosition should be ArrowPosition.UP or ArrowPosition.DOWN")
     }
 

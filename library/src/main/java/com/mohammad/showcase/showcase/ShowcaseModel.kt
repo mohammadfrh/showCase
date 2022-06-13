@@ -41,6 +41,8 @@ data class ShowcaseModel(val rectF: RectF,
         internal lateinit var callBack: ShowCaseCallBack
         internal var isNextEnable= false
         internal var isPrevEnable= false
+        internal var marginTop = 0
+        internal var marginBottom = 0
 
         fun setCallBack(callBack: ShowCaseCallBack) {
             this.callBack = callBack
@@ -50,6 +52,12 @@ data class ShowcaseModel(val rectF: RectF,
         }
         fun isPrevEnable(isEnable:Boolean){
             isPrevEnable = isEnable
+        }
+        fun setMarginTop(marginTop :Int){
+            this.marginTop = marginTop
+        }
+        fun setMarginBottom(marginBottom:Int){
+            this.marginBottom = marginBottom
         }
 
     }

@@ -31,7 +31,7 @@
             android:text="Button Toppppppppppppppppp"
             android:layout_marginTop="200dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/button_show_case_view"/>
 
         <Button
             android:id="@+id/button_center"
