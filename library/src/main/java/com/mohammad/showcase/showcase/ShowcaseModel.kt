@@ -31,7 +31,7 @@ data class ShowcaseModel(val rectF: RectF,
 
 
     fun horizontalCenter() = rectF.left + ((rectF.right - rectF.left) / 2)
-    fun verticalCenter() = rectF.top + ((rectF.bottom - rectF.top) / 2)
+    fun verticalCenter() = rectF.top + ((rectF.bottom - rectF.top) )
 
     fun bottomOfCircle() = verticalCenter() + radius
     fun topOfCircle() = verticalCenter() - radius
