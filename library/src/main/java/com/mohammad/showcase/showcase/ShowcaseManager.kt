@@ -197,5 +197,8 @@ data class ShowcaseManager(
         fun setMarginBottom(marginBottom:Int){
             ShowcaseModel.setMarginBottom(marginBottom)
         }
+        fun hideNextAndPrev(hide:Boolean){
+            ShowcaseModel.hideNextAndPrev(hide)
+        }
     }
 }

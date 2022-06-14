@@ -41,6 +41,7 @@ data class ShowcaseModel(val rectF: RectF,
         internal lateinit var callBack: ShowCaseCallBack
         internal var isNextEnable= false
         internal var isPrevEnable= false
+        internal var hideNextAndPrev = false
         internal var marginTop = 0
         internal var marginBottom = 0
 
@@ -58,6 +59,9 @@ data class ShowcaseModel(val rectF: RectF,
         }
         fun setMarginBottom(marginBottom:Int){
             this.marginBottom = marginBottom
+        }
+        fun hideNextAndPrev(hide:Boolean){
+            this.hideNextAndPrev = hide
         }
 
     }

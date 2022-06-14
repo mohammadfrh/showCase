@@ -5,6 +5,7 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.util.AttributeSet
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.Button
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.databinding.DataBindingUtil
@@ -129,6 +130,13 @@ class ShowcaseView @JvmOverloads constructor(context: Context, attrs: AttributeS
             }
             else{
                 binding.tooltipView.button_last.setTextColor(Color.parseColor("#AEACAC"))
+            }
+
+            if(ShowcaseModel.hideNextAndPrev){
+                binding.tooltipView.linearCompat_buttons.visibility = View.GONE
+            }
+            else{
+                binding.tooltipView.linearCompat_buttons.visibility = View.VISIBLE
             }
 
             binding.tooltipViewState = TooltipViewState(
